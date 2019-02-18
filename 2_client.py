@@ -2,7 +2,10 @@ import socket
 s=socket.socket()
 
 ip=input("enter IP Address")
-port=9999
+try:
+    port = int(input('enter port')
+except Exception:
+    port=9999
 ip_with_port=(ip,port)
 s.connect(ip_with_port)
 

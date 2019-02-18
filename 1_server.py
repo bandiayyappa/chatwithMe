@@ -4,7 +4,10 @@ s=socket.socket()
 name=socket.gethostname()
 ip=socket.gethostbyname(name)
 print(ip)
-port=9999
+try:
+    port = int(input('enter port number '))
+except Exception:
+    port = 9999 
 ip_with_port=(ip,port)
 
 s.bind(ip_with_port)
